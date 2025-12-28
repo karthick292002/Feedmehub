@@ -1,0 +1,227 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Personalized Content Dashboard Design System */
+
+@layer base {
+  :root {
+    /* Base Colors */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    
+    /* Brand Colors - Modern Purple/Blue Gradient Theme */
+    --primary: 250 84% 54%;
+    --primary-foreground: 0 0% 98%;
+    --primary-glow: 250 100% 70%;
+    --primary-dark: 250 84% 44%;
+    
+    /* Dashboard specific colors */
+    --dashboard-accent: 252 56% 57%;
+    --dashboard-accent-foreground: 0 0% 98%;
+    --dashboard-hover: 250 84% 54%;
+    
+    /* UI Components */
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --card-hover: 0 0% 97%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 250 84% 54%;
+    
+    /* Content specific */
+    --content-card: 0 0% 100%;
+    --content-card-hover: 0 0% 97%;
+    --content-border: 240 5.9% 90%;
+    
+    /* Favorites */
+    --favorite: 45 93% 58%;
+    --favorite-foreground: 240 5.9% 10%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(250 84% 54%), hsl(252 56% 57%));
+    --gradient-hero: linear-gradient(135deg, hsl(250 84% 54%) 0%, hsl(252 56% 57%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(240 4.8% 97%) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(240 3.8% 46.1% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(240 3.8% 46.1% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(240 3.8% 46.1% / 0.1);
+    --shadow-glow: 0 0 20px hsl(250 84% 54% / 0.3);
+    
+    /* Animations */
+    --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+    --radius: 0.75rem;
+    
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 250 84% 54%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 240 5.9% 90%;
+    --sidebar-ring: 250 84% 54%;
+  }
+
+  .dark {
+    /* Base Colors */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    
+    /* Brand Colors */
+    --primary: 250 84% 54%;
+    --primary-foreground: 240 10% 3.9%;
+    --primary-glow: 250 100% 70%;
+    --primary-dark: 250 84% 44%;
+    
+    /* Dashboard specific colors */
+    --dashboard-accent: 252 56% 57%;
+    --dashboard-accent-foreground: 0 0% 98%;
+    --dashboard-hover: 250 84% 54%;
+    
+    /* UI Components */
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --card-hover: 240 3.7% 15.9%;
+    
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 250 84% 54%;
+    
+    /* Content specific */
+    --content-card: 240 3.7% 15.9%;
+    --content-card-hover: 240 3.7% 20%;
+    --content-border: 240 3.7% 15.9%;
+    
+    /* Favorites */
+    --favorite: 45 93% 58%;
+    --favorite-foreground: 240 10% 3.9%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(250 84% 54%), hsl(252 56% 57%));
+    --gradient-hero: linear-gradient(135deg, hsl(250 84% 54%) 0%, hsl(252 56% 57%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(240 10% 3.9%) 0%, hsl(240 3.7% 15.9%) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1);
+    --shadow-glow: 0 0 20px hsl(250 84% 54% / 0.5);
+    
+    /* Sidebar */
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 250 84% 54%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 250 84% 54%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Content Card Animations */
+  .content-card {
+    @apply transition-all duration-300 ease-out hover:shadow-lg hover:scale-[1.02] 
+           bg-content-card border border-content-border rounded-xl;
+  }
+  
+  .content-card:hover {
+    background: hsl(var(--content-card-hover));
+    box-shadow: var(--shadow-lg);
+  }
+  
+  /* Gradient Backgrounds */
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  /* Custom Button Variants */
+  .btn-hero {
+    @apply bg-primary hover:bg-primary-dark text-primary-foreground 
+           shadow-lg hover:shadow-glow transition-all duration-300
+           font-medium rounded-xl px-6 py-3;
+  }
+  
+  .btn-favorite {
+    @apply bg-favorite hover:bg-favorite/90 text-favorite-foreground
+           transition-all duration-200 rounded-lg px-3 py-2 font-medium;
+  }
+  
+  /* Loading Animation */
+  .loading-shimmer {
+    @apply animate-pulse bg-gradient-to-r from-muted via-muted/50 to-muted;
+  }
+  
+  /* Custom Scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-primary/20 hover:bg-primary/40 rounded-full;
+  }
+}
